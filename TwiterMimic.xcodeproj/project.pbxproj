@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31076CF0241DA0AC002FB947 /* UIView_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CEF241DA0AC002FB947 /* UIView_Extensions.swift */; };
+		31076CF2241DA4DA002FB947 /* UIColor_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CF1241DA4DA002FB947 /* UIColor_Extensions.swift */; };
 		316995E9241D828300BEDFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316995E8241D828300BEDFD0 /* AppDelegate.swift */; };
 		316995EB241D828300BEDFD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316995EA241D828300BEDFD0 /* SceneDelegate.swift */; };
 		316995F0241D828300BEDFD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316995EE241D828300BEDFD0 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31076CEF241DA0AC002FB947 /* UIView_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_Extensions.swift; sourceTree = "<group>"; };
+		31076CF1241DA4DA002FB947 /* UIColor_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extensions.swift; sourceTree = "<group>"; };
 		316995E5241D828300BEDFD0 /* TwiterMimic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwiterMimic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		316995E8241D828300BEDFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		316995EA241D828300BEDFD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		31699603241D832600BEDFD0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				31076CEF241DA0AC002FB947 /* UIView_Extensions.swift */,
+				31076CF1241DA4DA002FB947 /* UIColor_Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 				3169960B241D855B00BEDFD0 /* NotificationsController.swift in Sources */,
 				316995E9241D828300BEDFD0 /* AppDelegate.swift in Sources */,
 				31699609241D854E00BEDFD0 /* ExploreController.swift in Sources */,
+				31076CF0241DA0AC002FB947 /* UIView_Extensions.swift in Sources */,
 				316995EB241D828300BEDFD0 /* SceneDelegate.swift in Sources */,
 				31699605241D83C300BEDFD0 /* MainTabController.swift in Sources */,
 				3169960D241D856B00BEDFD0 /* ConversationsController.swift in Sources */,
 				31699607241D852400BEDFD0 /* FeedController.swift in Sources */,
+				31076CF2241DA4DA002FB947 /* UIColor_Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
