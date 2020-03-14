@@ -17,24 +17,34 @@ class MainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        configureViewControllers()
+        //view.backgroundColor = .systemPink
     }
     
     // MARK: - Helpers
     
     func configureViewControllers() {
-        let feed = FeedController()
-        feed.tabBarItem.image = UIImage(named: "home_unselected")
+        //let feed = FeedController()
+        let feed = templateNavigationController(image: UIImage(named: "homeUnselected"),
+                                                rootViewController: FeedController())
         
-        let explore = ExploreController()
-        explore.tabBarItem.image = UIImage(named: "search_unselected")
+        let explore = templateNavigationController(image: UIImage(named: "searchUnselected"),
+                                                   rootViewController: ExploreController())
         
-        let notifications = NotificationsController()
-        notifications.tabBarItem.image = UIImage(named: "like_unselected")
+        let notifications = templateNavigationController(image: UIImage(named: "likeUnselected"),
+                                                         rootViewController: NotificationsController())
         
-        let conversations = ConversationsController()
-        conversations.tabBarItem.image = UIImage(named: "mail")
+        let conversations = templateNavigationController(image: UIImage(named: "mail"),
+                                                         rootViewController: ConversationsController())
         
         viewControllers = [feed, explore, notifications, conversations]
+    }
+    
+    func templateNavigationController(image: UIImage?, rootViewController: UIViewController)
+        -> UINavigationController {
+        let myNavigation =  UINavigationController(rootViewController: rootViewController)
+            myNavigation.tabBarItem.image = image
+            myNavigation.navigationBar.barTintColor = .white
+        return myNavigation
     }
 }

@@ -16,6 +16,8 @@ class ConversationsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .gray
+
     }
     
     // MARK: - Helpers
