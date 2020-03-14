@@ -17,6 +17,7 @@ class MainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureViewControllers()
         //view.backgroundColor = .systemPink
     }
@@ -24,7 +25,6 @@ class MainTabController: UITabBarController {
     // MARK: - Helpers
     
     func configureViewControllers() {
-        //let feed = FeedController()
         let feed = templateNavigationController(image: UIImage(named: "homeUnselected"),
                                                 rootViewController: FeedController())
         
@@ -36,7 +36,7 @@ class MainTabController: UITabBarController {
         
         let conversations = templateNavigationController(image: UIImage(named: "mail"),
                                                          rootViewController: ConversationsController())
-        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.black]
         viewControllers = [feed, explore, notifications, conversations]
     }
     
