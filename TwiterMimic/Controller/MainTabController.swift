@@ -15,19 +15,26 @@ class MainTabController: UITabBarController {
     let actionButton: UIButton = {
         let myButton = UIButton(type: .system)
         myButton.tintColor = .white
-        myButton.backgroundColor = .blue
+        myButton.backgroundColor = .logoBlue
         myButton.setImage(UIImage(named: "newTweet"), for: .normal)
+        myButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
         return myButton
     }()
     
     // MARK: - Lifecycle
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         configureViewControllers()
         //view.backgroundColor = .systemPink
+    }
+    
+    // MARK: - Selectors
+    
+    @objc
+    func actionButtonTapped() {
+        print(123)
     }
     
     // MARK: - Helpers
