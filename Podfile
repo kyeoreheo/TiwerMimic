@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'TwiterMimic' do
+target 'TwitterMimic' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for TwiterMimic
+  # Pods for TwitterMimic
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
