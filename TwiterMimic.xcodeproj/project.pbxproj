@@ -12,6 +12,7 @@
 		31076CF5241DA891002FB947 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CF4241DA891002FB947 /* LoginController.swift */; };
 		31076CF7241DA8F8002FB947 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CF6241DA8F8002FB947 /* RegistrationController.swift */; };
 		31076CF9241DDF6D002FB947 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CF8241DDF6D002FB947 /* CustomView.swift */; };
+		31076CFB241EAC22002FB947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31076CFA241EAC22002FB947 /* GoogleService-Info.plist */; };
 		316995E9241D828300BEDFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316995E8241D828300BEDFD0 /* AppDelegate.swift */; };
 		316995EB241D828300BEDFD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316995EA241D828300BEDFD0 /* SceneDelegate.swift */; };
 		316995F0241D828300BEDFD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316995EE241D828300BEDFD0 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		31076CF4241DA891002FB947 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		31076CF6241DA8F8002FB947 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		31076CF8241DDF6D002FB947 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		31076CFA241EAC22002FB947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		316995E5241D828300BEDFD0 /* TwiterMimic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwiterMimic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		316995E8241D828300BEDFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		316995EA241D828300BEDFD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				316995F1241D828400BEDFD0 /* Assets.xcassets */,
 				316995F3241D828400BEDFD0 /* LaunchScreen.storyboard */,
 				316995F6241D828400BEDFD0 /* Info.plist */,
+				31076CFA241EAC22002FB947 /* GoogleService-Info.plist */,
 			);
 			path = TwiterMimic;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				316995F5241D828400BEDFD0 /* LaunchScreen.storyboard in Resources */,
+				31076CFB241EAC22002FB947 /* GoogleService-Info.plist in Resources */,
 				316995F2241D828400BEDFD0 /* Assets.xcassets in Resources */,
 				316995F0241D828300BEDFD0 /* Main.storyboard in Resources */,
 			);
