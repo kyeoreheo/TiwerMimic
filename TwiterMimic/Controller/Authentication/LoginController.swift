@@ -51,13 +51,13 @@ class LoginController: UIViewController {
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        button.addTarget(self, action: #selector(login), for: .touchUpInside)
         return button
     }()
     
     private let dontHaveAccountButton: UIButton = {
         let button = CustomView().attributedButton("Don't have an account? ", " Sign Up")
-        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signUp), for: .touchUpInside)
         return button
     }()
     
@@ -71,12 +71,14 @@ class LoginController: UIViewController {
     // MARK: - Selector
     
     @objc
-    func handleLogin() {
+    func login() {
         
     }
     
     @objc
-    func handleShowSignUp() {
+    func signUp() {
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
         
     }
     
