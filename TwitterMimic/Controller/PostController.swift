@@ -35,6 +35,8 @@ class PostController: UIViewController {
         return imageView
     }()
     
+    private let captionTextView = CaptionTextView()
+    
     // MARK:- Lifecycle
     
     init(user: User) {
@@ -69,9 +71,12 @@ class PostController: UIViewController {
         view.backgroundColor = .white
         configureNavigationBar()
         
-        view.addSubview(profileImageView)
-        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
-                                paddingTop: 16, paddingLeft: 16)
+        let HStack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
+        HStack.axis = .horizontal
+        HStack.spacing = 12
+        
+        view.addSubview(HStack)
+        HStack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
         profileImageView.sd_setImage(with: user.profileImageUrl)
         //once it fetch, it loads from caches. so no extra fetch
     }
