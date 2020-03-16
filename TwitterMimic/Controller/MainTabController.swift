@@ -13,6 +13,15 @@ class MainTabController: UITabBarController {
     
     // MARK: - properties
     
+    var user: User? {
+        didSet {
+            guard let navigation = viewControllers?[0] as? UINavigationController,
+                  let feed = navigation.viewControllers.first as? FeedController
+            else { return }
+            feed.user = user
+        }
+    }
+    
     let actionButton: UIButton = {
         let myButton = UIButton(type: .system)
         myButton.tintColor = .white
@@ -24,7 +33,9 @@ class MainTabController: UITabBarController {
     
     // MARK: - API
     func fetchUser() {
-        UserService.shared.fetchUser()
+        UserService.shared.fetchUser { user in
+            self.user = user
+        }
     }
     
     // MARK: - Lifecycle
