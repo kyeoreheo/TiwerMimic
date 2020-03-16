@@ -20,15 +20,15 @@ struct AuthProperties {
 struct AuthService {
     static let shared = AuthService()
     
-    func logUserIn(email: String, password: String) {
-        print("email: \(email), pw: \(password)")
+    func logUserIn(email: String, password: String, completion: AuthDataResultCallback?) {
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
     
     func registerUser(user: AuthProperties, completion: @escaping(Error?, DatabaseReference) -> Void ) {
         guard let imageData = user.profileImage.jpegData(compressionQuality: 0.3) else { return }
         
         let filename = NSUUID().uuidString
-        let storageRef =  ST_PROFILE_IMAGE.child(filename)
+        let storageRef = ST_PROFILE_IMAGE.child(filename)
         storageRef.putData(imageData, metadata: nil) { (meta, error) in
             storageRef.downloadURL { (url, error) in
                 guard let profileImageUrl = url?.absoluteString else { return }
