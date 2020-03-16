@@ -51,7 +51,9 @@ class MainTabController: UITabBarController {
     
     @objc
     func actionButtonTapped() {
-        print(123)
+        guard let user = user else { return }
+        let navigation = UINavigationController(rootViewController: PostController(user: user))
+        present(navigation, animated: true, completion: nil)
     }
     
     // MARK: - configures
@@ -83,7 +85,6 @@ class MainTabController: UITabBarController {
         
         let conversations = templateNavigationController(image: UIImage(named: "mail"),
                                                          rootViewController: ConversationsController())
-        //UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.black]
         viewControllers = [feed, explore, notifications, conversations]
     }
     

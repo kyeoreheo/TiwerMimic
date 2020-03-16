@@ -14,6 +14,8 @@
 		31076CF7241DA8F8002FB947 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CF6241DA8F8002FB947 /* RegistrationController.swift */; };
 		31076CF9241DDF6D002FB947 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31076CF8241DDF6D002FB947 /* CustomView.swift */; };
 		31076CFB241EAC22002FB947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31076CFA241EAC22002FB947 /* GoogleService-Info.plist */; };
+		313A339C241F2286009FF778 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A339B241F2286009FF778 /* PostController.swift */; };
+		313A339E241F3FDA009FF778 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A339D241F3FDA009FF778 /* CaptionTextView.swift */; };
 		315F6A75241ECD0000EE2901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6A74241ECD0000EE2901 /* Constants.swift */; };
 		315F6A77241ED90400EE2901 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6A76241ED90400EE2901 /* AuthService.swift */; };
 		316995E9241D828300BEDFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316995E8241D828300BEDFD0 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		31076CF6241DA8F8002FB947 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		31076CF8241DDF6D002FB947 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		31076CFA241EAC22002FB947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		313A339B241F2286009FF778 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		313A339D241F3FDA009FF778 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		315F6A74241ECD0000EE2901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		315F6A76241ED90400EE2901 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		316995E5241D828300BEDFD0 /* TwitterMimic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterMimic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,7 @@
 				31699608241D854E00BEDFD0 /* ExploreController.swift */,
 				3169960A241D855B00BEDFD0 /* NotificationsController.swift */,
 				3169960C241D856B00BEDFD0 /* ConversationsController.swift */,
+				313A339B241F2286009FF778 /* PostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 		31699601241D830D00BEDFD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				313A339D241F3FDA009FF778 /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				31076CF0241DA0AC002FB947 /* UIView_Extensions.swift in Sources */,
 				31ECB46C241F0E9400C3AAD2 /* User.swift in Sources */,
 				316995EB241D828300BEDFD0 /* SceneDelegate.swift in Sources */,
+				313A339E241F3FDA009FF778 /* CaptionTextView.swift in Sources */,
 				31699605241D83C300BEDFD0 /* MainTabController.swift in Sources */,
 				31076CF9241DDF6D002FB947 /* CustomView.swift in Sources */,
 				315F6A75241ECD0000EE2901 /* Constants.swift in Sources */,
@@ -325,6 +332,7 @@
 				31076CF2241DA4DA002FB947 /* UIColor_Extensions.swift in Sources */,
 				31076CF5241DA891002FB947 /* LoginController.swift in Sources */,
 				315F6A77241ED90400EE2901 /* AuthService.swift in Sources */,
+				313A339C241F2286009FF778 /* PostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
