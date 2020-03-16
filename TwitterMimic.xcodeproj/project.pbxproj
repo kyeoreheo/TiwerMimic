@@ -26,6 +26,8 @@
 		31699609241D854E00BEDFD0 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31699608241D854E00BEDFD0 /* ExploreController.swift */; };
 		3169960B241D855B00BEDFD0 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169960A241D855B00BEDFD0 /* NotificationsController.swift */; };
 		3169960D241D856B00BEDFD0 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169960C241D856B00BEDFD0 /* ConversationsController.swift */; };
+		31ECB46A241F09D900C3AAD2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECB469241F09D900C3AAD2 /* UserService.swift */; };
+		31ECB46C241F0E9400C3AAD2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECB46B241F0E9400C3AAD2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		31699608241D854E00BEDFD0 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		3169960A241D855B00BEDFD0 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		3169960C241D856B00BEDFD0 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		31ECB469241F09D900C3AAD2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		31ECB46B241F0E9400C3AAD2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3744362605DB3A85868EF9CF /* Pods-TwitterMimic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterMimic.release.xcconfig"; path = "Target Support Files/Pods-TwitterMimic/Pods-TwitterMimic.release.xcconfig"; sourceTree = "<group>"; };
 		56D5DB24650B6ABE2EB62C8F /* Pods-TwiterMimic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwiterMimic.debug.xcconfig"; path = "Target Support Files/Pods-TwiterMimic/Pods-TwiterMimic.debug.xcconfig"; sourceTree = "<group>"; };
 		D13489B2FCBA0B3B181195A9 /* Pods-TwitterMimic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterMimic.debug.xcconfig"; path = "Target Support Files/Pods-TwitterMimic/Pods-TwitterMimic.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				315F6A76241ED90400EE2901 /* AuthService.swift */,
+				31ECB469241F09D900C3AAD2 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		31699602241D830E00BEDFD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31ECB46B241F0E9400C3AAD2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				316995E9241D828300BEDFD0 /* AppDelegate.swift in Sources */,
 				31699609241D854E00BEDFD0 /* ExploreController.swift in Sources */,
 				31076CF0241DA0AC002FB947 /* UIView_Extensions.swift in Sources */,
+				31ECB46C241F0E9400C3AAD2 /* User.swift in Sources */,
 				316995EB241D828300BEDFD0 /* SceneDelegate.swift in Sources */,
 				31699605241D83C300BEDFD0 /* MainTabController.swift in Sources */,
 				31076CF9241DDF6D002FB947 /* CustomView.swift in Sources */,
@@ -314,6 +321,7 @@
 				31076CF7241DA8F8002FB947 /* RegistrationController.swift in Sources */,
 				3169960D241D856B00BEDFD0 /* ConversationsController.swift in Sources */,
 				31699607241D852400BEDFD0 /* FeedController.swift in Sources */,
+				31ECB46A241F09D900C3AAD2 /* UserService.swift in Sources */,
 				31076CF2241DA4DA002FB947 /* UIColor_Extensions.swift in Sources */,
 				31076CF5241DA891002FB947 /* LoginController.swift in Sources */,
 				315F6A77241ED90400EE2901 /* AuthService.swift in Sources */,

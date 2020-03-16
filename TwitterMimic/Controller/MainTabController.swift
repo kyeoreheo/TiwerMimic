@@ -22,6 +22,11 @@ class MainTabController: UITabBarController {
         return myButton
     }()
     
+    // MARK: - API
+    func fetchUser() {
+        UserService.shared.fetchUser()
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -89,6 +94,7 @@ class MainTabController: UITabBarController {
         } else {
             configureUI()
             configureViewControllers()
+            fetchUser()
         }
     }
 }
