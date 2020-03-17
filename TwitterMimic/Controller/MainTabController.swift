@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class MainTabController: UITabBarController {
     
     // MARK: - properties
@@ -59,6 +60,7 @@ class MainTabController: UITabBarController {
     // MARK: - configures
     
     func configureUI() {
+        
         view.addSubview(actionButton)
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
@@ -75,7 +77,7 @@ class MainTabController: UITabBarController {
     
     func configureViewControllers() {
         let feed = templateNavigationController(image: UIImage(named: "homeUnselected"),
-                                                rootViewController: FeedController())
+                                                rootViewController: FeedController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         let explore = templateNavigationController(image: UIImage(named: "searchUnselected"),
                                                    rootViewController: ExploreController())

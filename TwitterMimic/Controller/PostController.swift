@@ -61,7 +61,14 @@ class PostController: UIViewController {
     
     @objc
     func post() {
-        
+        guard let content = captionTextView.text else { return }
+        PostService.shared.post(contentt: content) { (error, ref) in
+            if let error = error {
+                print("DEBUG:- filaed to upload with \(error.localizedDescription)")
+                return
+            }
+            self.dismiss(animated: true)
+        }
     }
     // MARK:- API
     

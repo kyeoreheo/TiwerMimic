@@ -8,8 +8,10 @@
 
 import UIKit
 import SDWebImage
+private let reuseIdentifier = "postCell"
 
-class FeedController: UIViewController {
+
+class FeedController: UICollectionViewController {
     // MARK: - properties
     
     var user: User? {
@@ -24,12 +26,22 @@ class FeedController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        fetchPost()
+    }
+    
+    // MARK:- API
+    func fetchPost() {
+        PostService.shared.fetchPost { posts in
+            print("DEBUG:- \(posts.count)")
+        }
     }
     
     // MARK: - Helpers
     
     func configureUI() {
         view.backgroundColor = .white
+        
+        collectionView.register(PostCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         let imageView = UIImageView(image: UIImage(named: "logoBlue"))
         imageView.contentMode = .scaleAspectFit
@@ -50,3 +62,35 @@ class FeedController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
     }
 }
+// MARK: - UICollectionViewDelegate/DataSource
+
+extension FeedController {
+    
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("DEBUG:- numberOfITem")
+        return 10
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PostCell
+        return cell
+    }
+}
+
+extension FeedController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 120)
+    }
+}
+
+//override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
+//
+//    cell.delegate = self
+//    cell.tweet = tweets[indexPath.row]
+//
+//    return cell
+//}
