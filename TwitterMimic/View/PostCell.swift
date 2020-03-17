@@ -10,6 +10,11 @@ import UIKit
 
 class PostCell: UICollectionViewCell {
     // MARK:- Properties
+    
+    var post: Post? {
+        didSet { configure() }
+    }
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -131,4 +136,12 @@ class PostCell: UICollectionViewCell {
         
     }
     // MARK:- Helpers
+    
+    func configure() {
+        guard let post = post else { return }
+        profileImageView.sd_setImage(with: post.user.profileImageUrl)
+        infoLabel.text = post.user.username
+        
+        
+    }
 }

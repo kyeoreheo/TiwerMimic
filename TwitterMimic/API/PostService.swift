@@ -28,11 +28,16 @@ struct PostService {
         var posts = [Post]()
         
         DB_POST.observe(.childAdded) { snapshot in
-            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            guard let dictionary = snapshot.value as? [String: Any],
+                  let uid = dictionary ["uid"] as? String
+                else { return }
             let postID = snapshot.key
-            let post = Post(postID: postID, dictionary: dictionary)
-            posts.append(post)
-            completion(posts)
+            
+            UserService.shared.fetchUser(uid: uid) { user in
+                let post = Post(user: user, postID: postID, dictionary: dictionary)
+                posts.append(post)
+                completion(posts)
+            }
         }
     }
 }

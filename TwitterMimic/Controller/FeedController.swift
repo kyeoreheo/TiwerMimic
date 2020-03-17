@@ -8,11 +8,17 @@
 
 import UIKit
 import SDWebImage
-private let reuseIdentifier = "postCell"
 
 
 class FeedController: UICollectionViewController {
     // MARK: - properties
+    private let reuseIdentifier = "postCell"
+
+    private var posts = [Post]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     var user: User? {
         didSet{
@@ -32,7 +38,7 @@ class FeedController: UICollectionViewController {
     // MARK:- API
     func fetchPost() {
         PostService.shared.fetchPost { posts in
-            print("DEBUG:- \(posts.count)")
+            self.posts = posts
         }
     }
     
@@ -66,16 +72,15 @@ class FeedController: UICollectionViewController {
 
 extension FeedController {
     
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("DEBUG:- numberOfITem")
-        return 10
+        return posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PostCell
+        
+        cell.post = posts[indexPath.row]
         return cell
     }
 }

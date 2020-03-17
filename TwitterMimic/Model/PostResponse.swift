@@ -15,9 +15,11 @@ struct Post {
     let likes: Int
     let sharedCount: Int
     var timestamp: Date!
+    let user: User
     
-    init(postID: String, dictionary: [String: Any]) {
+    init(user: User, postID: String, dictionary: [String: Any]) {
         self.postID = postID
+        self.user = user
         
         self.content = dictionary["content"] as? String ?? ""
         self.uid = dictionary["uid"] as? String ?? ""
