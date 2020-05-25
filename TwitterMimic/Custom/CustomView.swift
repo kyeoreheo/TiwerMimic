@@ -21,7 +21,7 @@ class CustomView {
         imageView.setDimensions(width: 24, height: 24)
         
         view.addSubview(textField)
-        textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor,
+        textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
                          paddingLeft: 8, paddingBottom: 8)
         
         let dividerView = UIView()

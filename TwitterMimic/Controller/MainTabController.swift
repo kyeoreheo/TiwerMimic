@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class MainTabController: UITabBarController {
     
     // MARK: - properties
@@ -33,7 +34,8 @@ class MainTabController: UITabBarController {
     
     // MARK: - API
     func fetchUser() {
-        UserService.shared.fetchUser { user in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        UserService.shared.fetchUser(uid: uid) { user in
             self.user = user
         }
     }
@@ -51,12 +53,16 @@ class MainTabController: UITabBarController {
     
     @objc
     func actionButtonTapped() {
-        print(123)
+        guard let user = user else { return }
+        let navigation = UINavigationController(rootViewController: PostController(user: user))
+        //navigation.modalPresentationStyle = .fullScreen
+        present(navigation, animated: true, completion: nil)
     }
     
     // MARK: - configures
     
     func configureUI() {
+        
         view.addSubview(actionButton)
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
@@ -73,7 +79,7 @@ class MainTabController: UITabBarController {
     
     func configureViewControllers() {
         let feed = templateNavigationController(image: UIImage(named: "homeUnselected"),
-                                                rootViewController: FeedController())
+                                                rootViewController: FeedController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         let explore = templateNavigationController(image: UIImage(named: "searchUnselected"),
                                                    rootViewController: ExploreController())
@@ -83,7 +89,6 @@ class MainTabController: UITabBarController {
         
         let conversations = templateNavigationController(image: UIImage(named: "mail"),
                                                          rootViewController: ConversationsController())
-        //UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.black]
         viewControllers = [feed, explore, notifications, conversations]
     }
     
