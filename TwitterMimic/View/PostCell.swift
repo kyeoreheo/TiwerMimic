@@ -139,8 +139,10 @@ class PostCell: UICollectionViewCell {
     
     func configure() {
         guard let post = post else { return }
-        profileImageView.sd_setImage(with: post.user.profileImageUrl)
-        infoLabel.text = post.user.username
+        let viewModel = PostVM(post: post)
+        
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        infoLabel.attributedText = viewModel.userInfoText
         
         
     }

@@ -55,6 +55,7 @@ class MainTabController: UITabBarController {
     func actionButtonTapped() {
         guard let user = user else { return }
         let navigation = UINavigationController(rootViewController: PostController(user: user))
+        //navigation.modalPresentationStyle = .fullScreen
         present(navigation, animated: true, completion: nil)
     }
     

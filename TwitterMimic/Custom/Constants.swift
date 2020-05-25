@@ -14,4 +14,3 @@ let DB_POST = DB_REF.child("posts")
 
 let ST_REF = Storage.storage().reference()
 let ST_PROFILE_IMAGE = ST_REF.child("profile_image")
-

@@ -96,7 +96,6 @@ class LoginController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
         
     }
-    
     // MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .logoBlue
